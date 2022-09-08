@@ -8,8 +8,7 @@
 # It could use a variable with the current year.
 # It would be even better to get the current year automatically
 username = input("What is your username?")
-age = input(f"How old are you {username} ?")
-age = int(age)
+age = int(input(f"How old are you {username} ?"))
 target_age = 100
 age_100 = target_age - age
 print(f"So you will be 100 in {age_100} years 😀 ")
