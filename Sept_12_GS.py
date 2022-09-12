@@ -4,7 +4,7 @@
 # If 35 to 37 (inclusive), output "all right"
 # If the temperature  over 37, then output  "possible fever
 # remember about type conversion if needed
-a = int(input("What is your body temperature?"))
+a = float(input("What is your body temperature?"))
 if a < 35:
     print("not too cold")
 elif 35 <= a <= 37:
@@ -19,10 +19,10 @@ else:
 # Calculate the bonus.
 # Example1: 5 years of experience, 1000 Euro salary, the bonus will be 450 Euro.
 # Example2: 1.5 years of experience, 1500 Euro salary, no bonus(0)
-b = int(input("What is yout monthly salary?"))
-c = float(input("How long have you been working for this company?"))
-if c > 2:
-    d = (c - 2)*b*0.15
-    print(f"Congrats, you get a bonus of {d} Euros")
-else:
-    print("Sorry no bonus for you")
+# b = int(input("What is yout monthly salary?"))
+# c = float(input("How long have you been working for this company?"))
+# if c > 2:
+#     d = (c - 2)*b*0.15
+#     print(f"Congrats, you get a bonus of {d} Euros")
+# else:
+#     print("Sorry no bonus for you")
