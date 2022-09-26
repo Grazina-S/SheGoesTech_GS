@@ -17,13 +17,9 @@
 # so the function here returns 3 and is done
 # PS. Note that we give perc as a percentage to be converted to a decimal number.
 # More test examples:
-
 # get_city_year(1000, 2, -50, 5000) -> -1 
-
 # get_city_year(1500, 5, 100, 5000) -> 15
-
 # get_city_year(1500000, 2.5, 10000, 2,000,000) -> 10
-
 # the trickiest case is something like this
 # get_city_year(1000, -3, 50, 2000) -> -1 is the correct answer but how to get there?
 
@@ -32,11 +28,16 @@ def big_city_when (p0, perc, delta, target_p):
     no_of_years = 0
     while p0 < target_p:
         pop_growth = round(p0*perc/100 + delta)
-        p0 += pop_growth
-        no_of_years += 1
+        if pop_growth > 0:
+            p0 += pop_growth
+            no_of_years += 1
+        else:
+            no_of_years = -1
+            break
     return no_of_years
 
 ##### TEST IF WORKS
-years = big_city_when(1500000, 2.5, 10000, 2000000)  
-print(years)
+years = big_city_when(1000, -3, 50, 2000)
+years2 = big_city_when(1500, 5, 100, 5000)  
+print(years, years2)
 #### YES IT DOES :-)        
