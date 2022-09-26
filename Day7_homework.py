@@ -38,6 +38,8 @@ def big_city_when (p0, perc, delta, target_p):
 
 ##### TEST IF WORKS
 years = big_city_when(1000, -3, 50, 2000)
-years2 = big_city_when(1500, 5, 100, 5000)  
+years2 = big_city_when(1500, 5, 100, 10000)  
 print(years, years2)
-#### YES IT DOES :-)        
+#### YES IT DOES :-)       
+# ANSWER to /get_city_year(1000, -3, 50, 2000) -> -1 is the correct answer but how to get there?/
+# population starts declining at ~ 1700, when |p0*perc| > delta, never reaching 2000
